@@ -29,3 +29,6 @@ const GoogleStrategy = require('passport-google-oauth20')
 
 passport.use(/* strategy */, /* callback function */)
 ```
+
+- The `Google Strategy` takes the following options: `CLIENT_ID, CLIENT_SECRET, and Redirect_url`
+- These details can be obtained from the `google cloud platform` usig the `API credentials` and enabling `OAuth credentials`
