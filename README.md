@@ -19,4 +19,13 @@
 
 ### Passport setup with Oauth
 
--
+- To use an OAuth with passport on a project, there are two modules we need to install: `passport` and `passport-strategy`. For example, if we want to use google authentication on the platform, we have to install `passport` and `passport google strategy`.
+- In the `passport configuration file` import passport and the `passport strategy` to be used for the authentication.
+- Then instantiate `passport.use()`
+
+```js
+const passport = require('passport')
+const GoogleStrategy = require('passport-google-oauth20')
+
+passport.use(/* strategy */, /* callback function */)
+```
