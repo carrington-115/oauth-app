@@ -18,10 +18,9 @@ router.get("/withgoogle", passport.authenticate("google", {
 }))
 
 // Redirect URL
-router.get('/withgoogle/redirect', (req, res) => {
-res.send("You reached the redirect URI");
-}  
-)
+router.get("/withgoogle/redirect",(req, res) => {
+  res.send("You reached the redirect URI");
+});
 
 // login
 router.get("/logout", (req, res) => {

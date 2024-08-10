@@ -8,8 +8,6 @@ const passport = require("./config/passport");
 app.set("view engine", "ejs");
 app.use("/auth", authRoute);
 
-console.log(process.env.CLIENT_ID, process.env.CLIENT_SECRET, process.env.REDIRECT_URL);
-
 app.get("/", (req, res) => {
   res.render("home");
 });

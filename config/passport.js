@@ -9,6 +9,9 @@ passport.use(
       clientSecret: process.env.CLIENT_SECRET,
       callbackURL: process.env.REDIRECT_URL,
     },
-    () => {}
+    () => {
+
+      
+    }
   )
 );
