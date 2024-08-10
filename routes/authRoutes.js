@@ -1,4 +1,5 @@
 const express = require("express");
+const passport = require("passport");
 const router = express.Router();
 
 // auth login
@@ -12,9 +13,15 @@ router.get("/signup", (req, res) => {
 });
 
 // login with google
-router.get("/withgoogle", (req, res) => {
-  res.send("Login with google");
-});
+router.get("/withgoogle", passport.authenticate("google", {
+  scope: ["profile"],
+}))
+
+// Redirect URL
+router.get('/withgoogle/redirect', (req, res) => {
+res.send("You reached the redirect URI");
+}  
+)
 
 // login
 router.get("/logout", (req, res) => {
