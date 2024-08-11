@@ -32,3 +32,12 @@ passport.use(/* strategy */, /* callback function */)
 
 - The `Google Strategy` takes the following options: `CLIENT_ID, CLIENT_SECRET, and Redirect_url`
 - These details can be obtained from the `google cloud platform` usig the `API credentials` and enabling `OAuth credentials`
+- After the consent screen is shown, the user is redirected to the `redirect_url` with a `code` which is used to get the user details
+
+### The Passport callback function
+- This function is fired once the user is authenticated by the OAuth service.
+- The function takes the `accessToken, refreshToken, profile, done` as arguments.
+
+### Creating the database for users
+- The next step is to figure out where the user is new to the application or not. If they are new, then we want to add them to our database.
+- 
